@@ -17,9 +17,9 @@ lightgbm.LGBMClassifier = partial(lightgbm.LGBMClassifier, verbosity=-1)
 from openfe import openfe, transform
 
 # -- Get Data
-X_train = pd.read_csv("../grand_prix_1/train.csv")
-X_test = pd.read_csv("../grand_prix_1/test.csv")
-original_dataset = pd.read_csv("../grand_prix_1/data.csv", sep=";")
+X_train = pd.read_csv("/train.csv")
+X_test = pd.read_csv("./test.csv")
+original_dataset = pd.read_csv("./data.csv", sep=";")
 label = "Target"
 
 # -- Add original data
@@ -101,8 +101,8 @@ predictor.fit_summary(verbosity=1)
 predict_proba_ag = predictor.predict_proba(X_test)
 
 # -- Run FLAML's Lottery Ticket Model (https://www.kaggle.com/code/gauravduttakiit/pss4e6-flaml-roc-auc-ovo, Version from June 1, 2024 at 12:13 PM)
-X_train = pd.read_csv("../grand_prix_1/train.csv")
-X_test = pd.read_csv("../grand_prix_1/test.csv")
+X_train = pd.read_csv("./train.csv")
+X_test = pd.read_csv("./test.csv")
 
 # Reproduce data from the notebook
 for df in [X_train, X_test]:
