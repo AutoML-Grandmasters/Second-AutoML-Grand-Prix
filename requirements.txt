@@ -1,0 +1,3 @@
+autogluon==1.1.0
+openfe==0.0.8
+FLAML==2.1.2
